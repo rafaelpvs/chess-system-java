@@ -17,6 +17,7 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		ChessMatch chessMatch = new ChessMatch();
 		List<ChessPiece> captured = new ArrayList<>();
+		
 		while (true) {
 			try {
 				UI.clearScreen();
@@ -33,7 +34,8 @@ public class Program {
 				ChessPosition target = UI.readChessPosition(sc);
 				
 				ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
-				if (capturedPiece !=null) {
+				
+				if (capturedPiece != null) {
 					captured.add(capturedPiece);
 				}
 			}
